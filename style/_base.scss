@@ -1,0 +1,33 @@
+$black: rgb(16, 17, 17);
+$grey: rgb(81, 90, 90);
+
+@mixin icons {
+    width: 15%;
+    padding: 1.5rem;
+    background-color: $grey;
+    border-radius: 25%;
+    cursor: pointer;
+}
+
+@mixin bordes {
+    width: 305px;
+    padding: 5px;
+    display: grid;
+    left: 50%;
+    border: 5px solid $black;
+    padding: 10px;
+    background-color: $grey;
+    border-radius: 15px;
+}
+
+@mixin laptops {
+    @media screen and (max-width: 70rem) { @content };        
+    }
+
+@mixin tablets {
+    @media screen and (max-width: 60rem) { @content };
+}
+
+@mixin phones {
+    @media screen and (max-width: 48rem) { @content };
+}

@@ -1,0 +1,120 @@
+body {
+    font-family:'Roboto', Arial, Helvetica, sans-serif ;
+    background: $grey;
+}
+
+.container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 20% 13% 72%;
+}
+
+
+.container-menu {
+    @include bordes();
+    grid-column: 1;
+    grid-row: 1;
+
+    img {
+        width: 10%;
+        padding: .5rem;
+        }
+    }
+
+    i {
+        &:hover {
+            background: #fff;
+        }
+        &:active {
+            background: #E82308;
+        }
+    }
+
+    .container-expand {
+        @include bordes();
+        grid-row: 2/3 ;
+        display : inline;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 10%; 
+            }
+
+            i{
+                @include icons();
+
+                &:hover {
+                    background: #fff;
+                }
+            }
+    }
+
+    .container-biblioteca {
+        @include bordes();
+        grid-row: 3/4;
+
+        img {
+            width: 25%;
+            padding: 0 15px;
+            border-radius: 30%;
+            float: left;
+            }
+    }
+
+    .container-fondo {
+        border: 5px solid $black;
+        padding: 10px;
+        border-radius: 15px;
+        background: $gray;
+        background-image: url(https://m.media-amazon.com/images/I/81s+i2hv-eL._UF1000,1000_QL80_.jpg);
+        width: 97%;
+        display:grid;
+        grid-column: 2/4;
+        grid-row: 1/4;
+    
+        img {
+            padding: auto;
+            display: flex;
+            justify-items: center;
+            object-fit: cover;
+        }
+    }
+
+
+    .container-album {
+        border: 5px solid $black;
+        border-radius: 15px;
+        background: -webkit-linear-gradient(#468468, #56C5C3);
+        grid-column: 2/3;
+        grid-row: 3/4;
+
+        label {
+            font-family:'Roboto', Arial, Helvetica, sans-serif ;
+            display: inline-block;
+        }
+
+        img {
+            width: 10%;
+            display: inline-block;
+            border-radius: 10px;
+        }
+    }
+
+.container-info {
+    border: 5px solid $black;
+    background: $gray;
+    border-radius: 15px;
+    grid-column: 3/3;
+    grid-row: 3/3 ;
+
+    .text {
+        font-family: 'Roboto', Arial, Helvetica, sans-serif;
+        width:10%;
+        display: inline;
+    }
+    img {
+        width: 50%;
+    }
+}
